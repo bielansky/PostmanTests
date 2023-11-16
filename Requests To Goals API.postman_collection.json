@@ -1,0 +1,165 @@
+{
+	"info": {
+		"_postman_id": "67eab6bf-268f-4894-8eae-686544f9492f",
+		"name": "Requests To Goals API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31002766"
+	},
+	"item": [
+		{
+			"name": "GET Goals",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/goals",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"goals"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Goal by Username",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/users/Rob/goals",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"users",
+						"Rob",
+						"goals"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE Goal",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/goals/2\n",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"goals",
+						"2\n"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Progress to Goal",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/goals/4/progress?progress=0.2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"goals",
+						"4",
+						"progress"
+					],
+					"query": [
+						{
+							"key": "progress",
+							"value": "0.2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Archive Goal",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/goals/4/archive",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"goals",
+						"4",
+						"archive"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT into Goal",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 3,\r\n  \"title\": \"Put blabla\",\r\n  \"due_date\": \"23.11.2024\",\r\n  \"frequency\": [\r\n    0\r\n  ],\r\n  \"progress\": 0.35,\r\n  \"archived\": false\r\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/goals/3",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"goals",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
